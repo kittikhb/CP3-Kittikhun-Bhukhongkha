@@ -1,7 +1,7 @@
-speed = int(input("Speed:"))
-hour = int(input("Hour:"))
+distance = int(input("Distance(km):"))
+hour = int(input("Duration(Hour):"))
 
-print("speed=",speed/hour,"km/h")
+print("speed=",distance/hour,"km/h")
 
 
 
