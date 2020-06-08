@@ -1,13 +1,12 @@
 menuList = []
-priceList = []
 
 def showBill():
     totalPrice = 0
     print("My food".center(20,"-"))
     for number in range(len(menuList)):
-        print(menuList[number],priceList[number])
-        totalPrice += int(priceList[number])
-        totalPriceVat = totalPrice+ totalPrice * 7/100
+        print(menuList[number])
+        totalPrice += int(menuList[number][1])
+        totalPriceVat = totalPrice + (totalPrice * 7/100)
     print("Before Vat:",totalPrice, "THB")
     print("Vat included:",totalPriceVat,"THB")
 
@@ -17,8 +16,7 @@ while True:
     break
   else:
       priceName = input("Please Enter Price :")
-      menuList.append(menuName)
-      priceList.append(priceName)
-print(menuList,priceList)
+      menuList.append([menuName,priceName])
+print(menuList)
 showBill()
 
